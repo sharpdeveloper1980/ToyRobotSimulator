@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Toy Robot simulator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+  <div id="container">
+    
+     
+    <ion-item>
+      <ion-label position="floating">Enter command</ion-label>
+      <ion-input ionChange="getValue($event)"></ion-input>
+    
+    </ion-item>
+      
+     
+   
+      <ion-button (click)="execute()">Execute Command</ion-button>
+      <p *ngIf="this.model.message">{{ this.model.message}}</p>
+  </div>
+</ion-content>
